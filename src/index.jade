@@ -12,44 +12,48 @@ html
     article
 
       section
-        h1 WTF is Composer and why I care?
+        h1 Composer
 
       section
-        h2 Keyboard Interaction
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-keys">bespoke-keys</a>
+        h2 Dependency Manager for PHP
+        p Official line: <em>"It allows you to declare the libraries your project depends on and it will manage (install/update) them for you"</em>
+        p My translation: <em>"Download PHP libraries and generate an autoload include file magically"</em>
 
       section
-        h2 Touch Interaction
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-touch">bespoke-touch</a>
+        h2 Installation
+        <tt>curl -sS https://getcomposer.org/installer | php</tt>
+        p
+        p Downloads composer.phar
 
       section
-        h2 Responsive Slides
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
-
-      section
-        h2 Bullet List
-        h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
+        h2 wtf is a phar file?
         ul
-          li Bullet 1
-          li Bullet 2
-          li Bullet 3
+          li A "PHP Archive" file
+          li Like .jar files, but for php
+          li Support compression of contents and verification via hashing or public/private key signing.
+          li So, useful for php command line app, exactly like Composer
 
       section
-        h2 Syntax Highlighting
-        h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
-        pre
-          code.language-javascript.
-            bespoke.from('article', [
-              classes(),
-              keys(),
-              touch(),
-              bullets('li, .bullet')
-            ]);
+        h2 Using composer.phar
+        p Installed globally on papyrus/castor
+        p Feel free to install on your local machines
+        p Run <tt>composer</tt> at command line [demo]
 
-      section(data-bespoke-hash='named-route')
-        h2 Named Route
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-        p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
+      section
+        h2 Using in a project
+        ul
+          li Useless without a composer.json file in the root of your project
+          li <img src="images/facebook-composer-json.png"/>
+          li package name (vendor / project) : version constraint
+          li then run <tt>composer install</tt>
+
+      section
+        h2 Why do I care?
+        p Lovely example showing composer.json checked in, and no junky libs
+
+      section
+        h2 Gotchas
+        p Memory running out, composer.lock?
 
       section.emphatic-text(data-bespoke-backdrop='emphatic')
         h2 Emphatic Slide!
